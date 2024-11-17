@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace TinyTotsWebApp.Models
 {
@@ -11,5 +7,5 @@ namespace TinyTotsWebApp.Models
         public DbSet<TinyTots> TinyTotsTable { get; set; }
     }
     // <TinyTots> refers to TinyTotsmodel 
-    // TinyTotsTable refers to the table name that will store the data in the database
+    // TinyTotsTable refers to the table name that will store the data in the database 
 }

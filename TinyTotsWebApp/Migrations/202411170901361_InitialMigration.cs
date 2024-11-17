@@ -16,7 +16,7 @@
                         SecondName = c.String(nullable: false),
                         Race = c.String(nullable: false),
                         Gender = c.String(nullable: false),
-                        FoodAllergires = c.String(),
+                        FoodAllergies = c.String(),
                     })
                 .PrimaryKey(t => t.RegistrationId);
             

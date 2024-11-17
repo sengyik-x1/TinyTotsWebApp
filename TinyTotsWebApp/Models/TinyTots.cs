@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TinyTotsWebApp.Models
 {
@@ -18,6 +14,6 @@ namespace TinyTotsWebApp.Models
         public string Race { get; set; }
         [Required]
         public string Gender { get; set; }
-        public string FoodAllergires { get; set; }
+        public string FoodAllergies { get; set; }
     }
 }

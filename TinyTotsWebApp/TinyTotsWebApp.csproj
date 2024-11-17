@@ -74,17 +74,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EditRegistration.aspx" />
     <Content Include="Global.asax" />
     <Content Include="RegisterChild.aspx" />
+    <Content Include="RegistrationList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditRegistration.aspx.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRegistration.aspx.designer.cs">
+      <DependentUpon>EditRegistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411101226473_InitialMigration.cs" />
-    <Compile Include="Migrations\202411101226473_InitialMigration.Designer.cs">
-      <DependentUpon>202411101226473_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202411170901361_InitialMigration.cs" />
+    <Compile Include="Migrations\202411170901361_InitialMigration.Designer.cs">
+      <DependentUpon>202411170901361_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TinyTotsDbContext.cs" />
@@ -96,6 +105,13 @@
     </Compile>
     <Compile Include="RegisterChild.aspx.designer.cs">
       <DependentUpon>RegisterChild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationList.aspx.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationList.aspx.designer.cs">
+      <DependentUpon>RegistrationList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -111,8 +127,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202411101226473_InitialMigration.resx">
-      <DependentUpon>202411101226473_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202411170901361_InitialMigration.resx">
+      <DependentUpon>202411170901361_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

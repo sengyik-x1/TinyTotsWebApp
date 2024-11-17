@@ -13,7 +13,7 @@ namespace TinyTotsWebApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202411101226473_InitialMigration"; }
+            get { return "202411170901361_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source
