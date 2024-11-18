@@ -93,24 +93,23 @@
 
             <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="form-element" OnClick="btnRegister_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="form-element" OnClick="btnCancel_Click" />
-            <h2 id="txt_currentTime">Hello friends! The time is now $time</h2>
+         
+            <h2><asp:Label ID="lblCurrentTime" runat="server" Text="" CssClass="form-element"></asp:Label></h2>
         </div>
     </form>
     <script>
 
 
-        $('#txt_currentTime').css({ 'color': '#8A2BE2' });
+        $('#<%= lblCurrentTime.ClientID %>').css({ 'color': '#8A2BE2' });
 
         function updateTime() {
             var now = new Date();
             var date = now.toLocaleDateString();
             var timeString = now.toLocaleTimeString();
-            $('#txt_currentTime').text('Hello friends! The time is now ' + date + ' '+ timeString);
+            $('#<%= lblCurrentTime.ClientID %>').html("Hello friends! The time now is " + date + timeString);
         }
 
-        $(document).ready(function () {
-            setInterval(updateTime, 1000);
-        });
+        setInterval(updateTime, 1000);
 
 
    

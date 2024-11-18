@@ -9,6 +9,12 @@ namespace TinyTotsWebApp
 {
     public partial class RegisterChild : System.Web.UI.Page
     {
+        protected void Page_Load(object sender,  EventArgs e)
+        {
+            if (!IsPostBack) {
+                lblCurrentTime.Text = "Hello friends! The time now is " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+        }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             using(var db = new TinyTotsDbContext())
@@ -64,5 +70,7 @@ namespace TinyTotsWebApp
             }
 
         }
+
+
     }
 }
