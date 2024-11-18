@@ -6,6 +6,12 @@
 <head runat="server">
     <title>Registration List</title>
     <style>
+        body {
+            margin: 20px; /* Adjust value as needed */
+            padding: 0; /* Optional: reset padding */
+            box-sizing: border-box; /* Ensures consistent box-sizing */
+        }
+
         .green-title {
             color: green;
         }
@@ -41,26 +47,22 @@
             }
 
         .search-bar {
-/*            display: flex;
+            /*            display: flex;
             flex-direction:row;*/
             gap: 10px;
-/*            align-items: center;
+            /*            align-items: center;
             justify-content: center;*/
-            justify-self:center;
+            justify-self: center;
             font-weight: bold;
             color: green;
-            
-            
         }
-
-            
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="nav-menu">
             <a href="RegisterChild.aspx">Register Child</a>
-            <a href="RegisterList.aspx">Registration List</a>
+            <a href="RegisterList.aspx" style="color: green">Registration List</a>
         </div>
 
         <div>
@@ -69,7 +71,7 @@
             <div class="search-bar">
                 <label for="txtSearch">Search</label>
                 <asp:TextBox ID="txtSearch" runat="server" placeholder="Search" CssClass="form-element"></asp:TextBox>
-                 <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="form-element" />
+                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="form-element" />
             </div>
 
             <div class="grid-container">

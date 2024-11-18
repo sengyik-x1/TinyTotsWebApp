@@ -28,5 +28,41 @@ namespace TinyTotsWebApp
                 db.SaveChanges();
             }
         }
+
+        protected void cblAllergies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool isNoneChecked = cblAllergies.Items.FindByValue("None").Selected;
+
+            foreach (ListItem item in cblAllergies.Items)
+            {
+                if (item.Value != "None")
+                {
+                    item.Enabled = !isNoneChecked;
+                }
+
+                if (isNoneChecked && item.Value != "None")
+                {
+                    item.Selected = false;
+                }
+
+            }
+               
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = string.Empty;
+            txtSecondName.Text = string.Empty;
+
+            ddlRace.SelectedIndex = 0;
+
+            rblGender.ClearSelection();
+
+            foreach (ListItem item in cblAllergies.Items)
+            {
+                item.Selected = false;
+            }
+
+        }
     }
 }

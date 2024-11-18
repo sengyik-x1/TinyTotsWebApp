@@ -5,54 +5,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Edit Registration</title>
-     <style>
-     .green-title{
-         color: green;
+    <style>
+        body {
+            margin: 20px; /* Adjust value as needed */
+            padding: 0; /* Optional: reset padding */
+            box-sizing: border-box; /* Ensures consistent box-sizing */
+        }
 
-     }
+        .green-title {
+            color: green;
+        }
 
-     .form-element{
-         margin-bottom: 10px;
-     }
+        .form-element {
+            margin-bottom: 10px;
+        }
 
-     .nav-menu{
-         background-color: #f1f1f1;
-         padding: 10px;
-         text-align: center;
-     }
+        .nav-menu {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
 
-     .nav-menu a{
-         margin: 0 15px;
-         text-decoration: none;
-         font-weight: bold;
-         color: #333;
-     }
+            .nav-menu a {
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                color: #333;
+            }
 
-     .nav-menu a:hover{
-         color: green;
-     }
+                .nav-menu a:hover {
+                    color: green;
+                }
 
-     .grid-container{
-         display: flex;
-         justify-content: center;
-     }
+        .grid-container {
+            display: flex;
+            justify-content: center;
+        }
 
-     .grid-container .gridview-style{
-         width: 80%;
-     }
- </style>
+            .grid-container .gridview-style {
+                width: 80%;
+            }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="nav-menu">
-            <a href="RegistrationChild.aspx">Register Child</a>
+            <a href="RegisterChild.aspx">Register Child</a>
             <a href="RegistrationList.aspx">Registration List</a>
         </div>
 
         <div>
             <h1 class="green-title">Edit  Registration</h1>
             <asp:HiddenField ID="hfRegistrationId" runat="server" />
-            
+
             <label for="txtFirstName">First Name:</label>
             <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" CssClass="form-element"></asp:TextBox><br />
 
